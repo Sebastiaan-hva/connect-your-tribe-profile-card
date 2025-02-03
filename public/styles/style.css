@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:oklch(65.29% 0.2195 45.53)
+}
+
+body{
+  color: var(--clr-gray);
+  margin: 2rem;
+}
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 32rem);
+  justify-content: center;
+}
+
+.container {
+  overflow: hidden;
+  box-shadow: px 2px 8px 0px var(--clr-gray-light);
+  background-color: white;
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  margin: 0.5rem;
+}
+
+
+h1{
+  font-size: 2.0em;
+  text-align: center;
+  padding-top: -.05em;
+  padding-bottom: -.1em;
+  color:rgb(255, 255, 255);
+  background-color: rgb(253, 137, 137)
+}
+
+article{
+  background-color: rgb(255, 255, 255); 
+}
+
+.banner{
+  position: absolute;
+  background-image: url(SBD_Banner.jpg);
+  scale:1.0;
+  margin-bottom:1px;
+  height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img{
+  display:block; 
+  width:29em;
+  height:auto;
+  margin:auto;
+  clip-path: circle(220px at center);
+  margin-top: 9%;
+  margin-bottom: -7%;
+}
+
+p{
+margin:auto;
+}
+
+h2 {
+  padding: 2%;
+  color: rgb(255, 255, 255);
+  background-color:rgb(129, 129, 129);
+  grid-row: 2/3;
+  font-size: 1.5em;
+}
+
+@media (max-width: 32em) {
+  body{
+    scale:0.85
+  }
+  
+}
+
+@media (min-width: 60em) {
+  body{
+    scale:1.10;
+  }
+}
