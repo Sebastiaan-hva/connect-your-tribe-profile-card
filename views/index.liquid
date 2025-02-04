@@ -1,29 +1,37 @@
 {% render 'partials/head.liquid' %}
 
-
+<main>
 <article class="container">
   <header class="banner">
     <h1>{{ person.name }}</h1> 
   </header>
 
-  <img src="assets/DSC03369-Enhanced-NR.jpg">
+  <img id="profile-pic" src="assets/LM-11.jpg">
     
-  <p>
-    <h2> I'm better than Jon Jones. </h2>
-    <h2> I'm better than Sean Combs. </h2>  
-    <h2> I am even better than John Holmes.</h2>
-  </p>
+  <details>
+    <summary>What's This?</summary>
+
+    <ul>
+        <li> 
+          
+           <label> <input type="radio" name="selection" value="show"/>Show I'm Watching </label> 
+
+           <label> <input type="radio" name="selection" value="game"/>Game I have beeen playing </label> 
+
+           <label> <input type="radio" name="selection" value="movie"/>Last movie I've watched </label> 
+         
+          </li>
+    </ul>
+
+  </details>
 </article>
+</main>
+
 
 
 <article>
   <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
   </header>
-
-  <p>{{ person.name }}</p>
-
   <footer></footer>
 </article>
 

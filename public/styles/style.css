@@ -7,8 +7,9 @@
 }
 
 body{
-  color: var(--clr-gray);
-  margin: 2rem;
+  max-width:32em;
+  margin-left: 40%;
+  margin-right: 40%;
 }
 
 .wrapper-grid {
@@ -19,7 +20,7 @@ body{
 
 .container {
   overflow: hidden;
-  box-shadow: px 2px 8px 0px var(--clr-gray-light);
+  box-shadow: px 2px 8px 0px black;
   background-color: white;
   text-align: center;
   border-radius: 1rem;
@@ -63,16 +64,52 @@ img{
   margin-bottom: -7%;
 }
 
-p{
-margin:auto;
+
+details{
+  
 }
 
-h2 {
+summary {
+  font-size:1.5em;
+  background-color: aliceblue;
+}
+
+li, label {
+  background-color: aliceblue;
+  font-size:0.9em;
   padding: 2%;
   color: rgb(255, 255, 255);
-  background-color:rgb(129, 129, 129);
+  background-color:rgb(255, 255, 255);
   grid-row: 2/3;
-  font-size: 1.5em;
+}
+
+ul{
+  list-style-type: none;
+  background-color: antiquewhite;
+  padding:2em;
+}
+
+li{
+  display:flex;
+  flex-direction: column;
+  justify-content:space-around;
+}
+li:nth-of-type(1) label {
+	background-color: rgb(54, 54, 54);
+}
+
+li:nth-of-type(1) label:has( :checked ) {
+	background-color: rgb(240, 120, 51);
+}
+
+li:nth-of-type(4) label:has( :focus-visible ) {
+	outline:solid .1em rgb(0, 0, 0);
+	outline-offset:.1em;
+}
+
+label{
+  margin-left:auto;
+  margin-right:auto;
 }
 
 @media (max-width: 32em) {
