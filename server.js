@@ -14,7 +14,6 @@ const personResponse = await fetch('https://fdnd.directus.app/items/person/' + p
 
 // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
 const personResponseJSON = await personResponse.json()
-
 // Controleer eventueel de data in je console
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
 // console.log(personResponseJSON)
@@ -43,11 +42,10 @@ app.get('/', async function (request, response) {
    response.render('index.liquid', {person: personResponseJSON.data})
 })
 
-const custom = JSON.parse(personResponseJSON.data.custom)
-app.get('/oefenen', async function (request, response) {
-  response.render('oefenen.liquid', {person: personResponseJSON.data, custom: custom})
+personResponseJSON.data.custom = JSON.parse(personResponseJSON.data.custom)
+app.get('/', async function (request, response) {
+  response.render('index', {person: personResponseJSON.data})
 })
- 
 
 
  
@@ -77,4 +75,4 @@ app.listen(app.get('port'), function () {
 })
 
 
-console.log(custom);
+// console.log(custom.movie);

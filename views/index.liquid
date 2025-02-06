@@ -9,18 +9,22 @@
   </header>
 
   <img id="profile-pic" src="assets/LM-11.jpg">
-    
-  <details>
+  
+  <h2>{{ person.bio }}</h2>
+
+
+  
+  <details class="ul-movement">
     <summary>What's This?</summary>
 
     <ul>
         <li> 
           
-           <label> <input type="radio" name="selection" value="show"/>Show I'm Watching </label> 
+           <label> <input type="radio" name="selection" value="show"/>Show I'm Watching:  {{ person.custom.tv_show }} </label> 
 
-           <label> <input type="radio" name="selection" value="game"/>Game I have beeen playing </label> 
+           <label> <input type="radio" name="selection" value="game"/>Game I have beeen playing: {{ person.custom.game }} </label> 
 
-           <label> <input type="radio" name="selection" value="movie"/>Last movie I've watched </label> 
+           <label> <input type="radio" name="selection" value="movie"/>Last movie I've watched: {{ person.custom.movie }}  </label> 
          
           </li>
     </ul>
@@ -29,13 +33,9 @@
 </article>
 </main>
 
-
-
-<article>
-  <header>
-  </header>
-  <footer></footer>
-</article>
+<footer class="hover">
+{{ person.custom.favorite_drink }}
+</footer>
 
 
 

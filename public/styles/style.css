@@ -7,9 +7,17 @@
 }
 
 body{
-  max-width:32em;
+  max-width:1200px;
+  
+}
+
+main{
+  margin-top:3em;
+  max-width:34em;
   margin-left: 20%;
-  margin-right: 20%;
+  margin-right: 0%;
+  position:relative;
+  
 }
 
 .wrapper-grid {
@@ -20,12 +28,13 @@ body{
 
 .container {
   overflow: hidden;
-  box-shadow: px 2px 8px 0px black;
+  box-shadow: 0px 2px 8px 0px rgb(255, 243, 209);
   background-color: white;
   text-align: center;
   border-radius: 1rem;
   position: relative;
   margin: 0.5rem;
+  margin-top:3em;
 }
 
 
@@ -46,8 +55,9 @@ article{
   position: absolute;
   background-image: url(SBD_Banner.jpg);
   scale:1.0;
+  margin-top: 0,5em;
   margin-bottom:1px;
-  height: 10rem;
+  height: 9rem;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,13 +70,13 @@ img{
   height:auto;
   margin:auto;
   clip-path: circle(220px at center);
-  margin-top: 9%;
-  margin-bottom: -7%;
+  margin-top: 1%;
+  margin-bottom: -22%;
 }
 
 
-details{
-  
+p{
+  color:black;
 }
 
 summary {
@@ -87,34 +97,90 @@ ul{
   list-style-type: none;
   background-color: antiquewhite;
   padding:2em;
+  translate: 0px -470px;
+  li{
+    margin-bottom:0px;
+  }
+}
+
+details{
+  height:8em;
 }
 
 li{
   display:flex;
   flex-direction: column;
   justify-content:space-around;
+  font-size:1.2em;
+  margin-top:0em;
+  margin-bottom:0em;
 }
+
+label{
+  /* position:relative; */
+  width:100%;
+  img{
+    /* margin-left:100px; */
+    margin-top:0%;
+    /* overflow-Y:visible; */
+    }
+    margin-bottom:0.1em;
+}
+
 li:nth-of-type(1) label {
 	background-color: rgb(54, 54, 54);
 }
 
 li:nth-of-type(1) label:has( :checked ) {
-	background-color: rgb(240, 120, 51);
+  margin-bottom:0;
+  background-image:url(house.jpg);
+  background-size:cover;
+	background-color: rgb(173, 78, 23);
+  height:250px;
+  scale:0.9;
+  
+  
+
 }
 
-li:nth-of-type(4) label:has( :focus-visible ) {
+
+li:nth-of-type(1) label:has( :focus-visible ) {
 	outline:solid .1em rgb(0, 0, 0);
 	outline-offset:.1em;
 }
+
+
 
 label{
   margin-left:auto;
   margin-right:auto;
 }
 
+h2{
+  background-color: rgb(158, 66, 0);
+  color:rgb(255, 255, 255);
+  font-size:2.5em;
+  text-transform:capitalize;
+  margin-bottom:0.5em;
+  z-index:1;
+}
+
 @media (max-width: 32em) {
   body{
-    scale:0.85
+    scale:0.85;
+    margin-left:1%;
+    main{
+      margin-left:0%;
+      max-width:26em;
+    }
+    img{
+      scale:0.8;
+      margin-left:-9%;
+      margin-bottom:-40%;
+    }
+    footer{
+      max-width:80%;
+    }
   }
   
 }
@@ -122,5 +188,34 @@ label{
 @media (min-width: 60em) {
   body{
     scale:1.10;
+    margin-left:10%;
   }
+}
+
+footer{
+  position:absolute;
+  background-color: white;
+  text-align: center;
+  margin-left:10%;
+  margin-right:10%;
+  margin-top:25em;
+  width:130%;
+  color:grey;
+  word-spacing:2em;
+  height:5%;
+}
+
+footer:hover{
+  font-size:3em;
+  height:15%;
+  translate: 0 -25em;
+  transition-duration: 5.8s;
+}
+
+
+.ul-movement{
+  /* translate: 0px -290px; */
+  translate:0px;
+  height:1.7em;
+ 
 }
